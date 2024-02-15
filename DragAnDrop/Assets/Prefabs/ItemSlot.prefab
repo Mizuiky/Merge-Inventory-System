@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d84ab9f6eaa6e449558808f03d9384, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _slotGlow: {fileID: 4702160959247429632}
+  _glowSlot: {fileID: 4702160959247429632}

@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragableItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler ,IDragHandler, IDropHandler, IEndDragHandler
+public class DragableItem : MonoBehaviour, IPointerDownHandler,IBeginDragHandler ,IDragHandler, IDropHandler, IEndDragHandler
 {
     [Header("Drag Settings")]
+
     [SerializeField]
     private float _smoothTime;
     [SerializeField]
@@ -55,6 +56,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
     {
         if(_draggingItem != null)
         {
+            
             //Here we need to transform the touch mouse position in relation of the rectransform of the object and the camera, to the world point to be able to movement the item
             if (RectTransformUtility.ScreenPointToWorldPointInRectangle(_draggingItem, eventData.position, eventData.pressEventCamera, out _globalMousePosition))
             {
@@ -63,9 +65,4 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandle
             }            
         }
     }
-
-    //private ItemSlot DetectSlot()
-    //{
-
-    //}
 }
